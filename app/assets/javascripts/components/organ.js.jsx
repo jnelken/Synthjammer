@@ -8,7 +8,7 @@ var Organ = React.createClass({
           {Object.keys(TONES).map(function (key) {
             return <li>
                     <Key realNoteName={key} noteName={TONES[key] * 10 } />
-                    <Key realNoteName={key} noteName={TONES[key] * 8 } />
+                    <Key realNoteName={key} noteName={TONES[key] * 8 + 5 } />
                     <Key realNoteName={key} noteName={TONES[key] * 6 } />
                     <Key realNoteName={key} noteName={TONES[key] * 5 } />
                     <Key realNoteName={key} noteName={TONES[key] * 4 } />
