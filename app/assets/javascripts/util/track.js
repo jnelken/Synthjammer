@@ -31,7 +31,7 @@
         delete this.intervalId;
         clearInterval(this.intervalId);
       }
-    }.bind(this), 1000);
+    }.bind(this), 1000/60);
 
   };
 

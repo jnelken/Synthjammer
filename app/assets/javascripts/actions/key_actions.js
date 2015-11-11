@@ -15,8 +15,12 @@ window.KeyActions = {
   },
 
   batchPress: function (notes) {
-    KeyActions.keyUnPressed(KeyStore.all());
-    KeyActions.keyPressed(notes);
+    AppDispatcher.dispatch({
+      eventType: 'BATCH_PRESS',
+      notes: notes
+    });
+    // KeyActions.keyUnPressed(KeyStore.all());
+    // KeyActions.keyPressed(notes);
   }
 
 };

@@ -31,6 +31,11 @@
     return _keysPlayed.slice(0);
   };
 
+  KeyStore.update = function (notes) {
+    _keysPlayed = notes;
+
+  },
+
   KeyStore.dispatcherToken = AppDispatcher.register(function (payload) {
     switch (payload.eventType) {
       case 'KEY_PRESSED':
@@ -39,6 +44,10 @@
         break;
       case 'KEY_UNPRESSED':
         KeyStore.removeKey(payload.noteName);
+        KeyStore.changed();
+        break;
+      case "BATCH_PRESS":
+        KeyStore.update(payload.notes);
         KeyStore.changed();
         break;
     }
