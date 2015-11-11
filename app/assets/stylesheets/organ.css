@@ -1,0 +1,48 @@
+html, body, ul, li, h1, h3, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: center;
+  text-decoration: inherit;
+
+  background: transparent;
+
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div {
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+.organ {
+  margin: 0 auto;
+  display: block;
+}
+
+
+ul {
+  width: 500px;
+  margin: auto;
+  list-style: none;
+}
+
+li {
+  float:left;
+  width: 50px;
+  height: 100px;
+  display: block;
+  border: 2px solid black;
+}
+
+.true {
+  background: yellow;
+}
