@@ -24,8 +24,8 @@
     return gainNode;
   };
 
-  Note.prototype.start = function () {
-    this.gainNode.gain.value = 10;
+  Note.prototype.start = function (gain) {
+    this.gainNode.gain.value = gain;
   };
 
   Note.prototype.stop = function () {

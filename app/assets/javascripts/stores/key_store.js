@@ -1,7 +1,8 @@
 (function () {
-
+  var octaveX = 1;
   var _keysPlayed = [];
   var CHANGE_EVENT = "change";
+
   var KeyStore = window.KeyStore = $.extend({}, EventEmitter.prototype);
   KeyStore.setMaxListeners(99);
 
@@ -33,7 +34,14 @@
 
   KeyStore.update = function (notes) {
     _keysPlayed = notes;
+  },
 
+  KeyStore.octaveX = function (multiplier) {
+    if (!(multiplier)) {
+      multiplier = 1;
+    }
+    octaveX = octaveX * multiplier;
+    return octaveX;
   },
 
   KeyStore.dispatcherToken = AppDispatcher.register(function (payload) {
@@ -48,6 +56,10 @@
         break;
       case "BATCH_PRESS":
         KeyStore.update(payload.notes);
+        KeyStore.changed();
+        break;
+      case "OCTAVE":
+        KeyStore.octaveX(payload.octaveX);
         KeyStore.changed();
         break;
     }

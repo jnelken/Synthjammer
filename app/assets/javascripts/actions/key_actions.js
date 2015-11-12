@@ -1,5 +1,12 @@
 window.KeyActions = {
 
+  octaveChange: function (octaveX) {
+    AppDispatcher.dispatch({
+      eventType: 'OCTAVE',
+      octaveX: octaveX
+    });
+  },
+
   keyPressed: function (noteName) {
     AppDispatcher.dispatch({
       eventType: 'KEY_PRESSED',
