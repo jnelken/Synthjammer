@@ -30,13 +30,17 @@ var Key = React.createClass({
 
 
   render: function () {
-    var showNote = "";
+    var pressedClass = "unpressed";
+    var overtoneClass = 'overtone';
+
     if (this.props.show) {
-      showNote = "♪";
+      overtoneClass = "root";
+    }
+    if (this.state.pressed) {
+      pressedClass = 'pressed';
     }
     return (
-      <div className={this.state.pressed}>
-        {showNote}
+      <div className={overtoneClass + " " + pressedClass}>
     </div>
     );
   }
