@@ -25,9 +25,9 @@ body {
 }
 
 h1 {
-  text-shadow: 1px 1px 0px black;
+  text-shadow: 1px 2px 0px black;
   color: #ff91fb;
-  margin-top: 80px;
+  margin-top: 150px;
   font-size: 72px;
   font-weight: 900;
   font-weight: bolder;
@@ -50,24 +50,35 @@ button {
   color: #000;
   background: #ddd;
   border-radius: 50px;
-  border: 1px solid black;
-  box-shadow: 1px 1px 1px black;
+  /*border: 1px solid black;*/
+  box-shadow: 0px 5px 1px #000;
+  border: none;
+
 }
 
 .play {
-  color: rgb(0, 208, 52);
   font-size: 36px;
   padding: 10px;
   border: none;
 }
 
+.play:hover {
+  color: rgb(0, 208, 52);
+}
+
 .stop {
   font-size: 48px;
+    border: none;
+}
+
+.stop:hover {
+  color: white;
 }
 
 .record {
   font-size: 48px;
   padding-bottom: 20px;
+    border: none;
 }
 
 .record:hover {
@@ -76,7 +87,7 @@ button {
 
 .record:active, .stop:active, .play:active {
   background: #ccc;
-
+  box-shadow: 0px 1px 1px #000;
 }
 
 

@@ -1,19 +1,22 @@
 var Key = React.createClass({
 
   getInitialState: function () {
-    return {pressed: false, note: new Note(this.props.noteName)};
+    return {
+      pressed: false,
+      note: new Note(this.props.noteName),
+      octave: KeyStore.octaveX()
+    };
   },
 
   componentDidMount: function () {
     KeyStore.addChangeHandler(this.toggleNote);
     KeyStore.addChangeHandler(this.changeOctave);
-
   },
 
   changeOctave: function () {
-    if (this.props.octave !== KeyStore.octaveX()) {
-      this.props.octave = KeyStore.octaveX();
-      this.setState({note: new Note(this.props.noteName * this.props.octave)});
+    if (this.state.octave !== KeyStore.octaveX()) {
+      this.setState({ octave: KeyStore.octaveX() });
+      this.setState({ note: new Note(this.props.noteName * this.props.octave) });
     }
   },
 

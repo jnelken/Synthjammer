@@ -10,7 +10,7 @@ getInitialState: function () {
         <Recorder />
         <ul className="group keyboard">
           {Object.keys(TONES).map(function (key) {
-            return <li className="note">
+            return <li key={key} className="note">
                     <Key gain={0.1} realNoteName={key} noteName={ TONES[key] * 6 } octave={octave} />
                     <Key gain={0.1} realNoteName={key} noteName={ TONES[key] * 5 } octave={octave} />
                     <Key gain={0.1} realNoteName={key} noteName={ TONES[key] * 4 + 3 } octave={octave} />
