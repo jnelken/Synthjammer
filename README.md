@@ -3,7 +3,7 @@
 A web synth made with React.js that has playback capabilities and
 octave modulation.
 
-[Live][heoku]
+[Live][heroku]
 
 [heroku]: https://synthjammer.herokuapp.com/
 
