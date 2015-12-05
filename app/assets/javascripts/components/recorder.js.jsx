@@ -27,7 +27,7 @@ var Recorder = React.createClass({
   render: function () {
     return (
       <div className="controls">
-        <button className="record" onClick={this.pushedRecord}>⦿</button>
+        <button className="record" onClick={this.pushedRecord}>●</button>
         <button className="stop" onClick={this.pushedStop}>◼︎</button>
         <button className="play" onClick={this.pushedPlay}>►</button>
       </div>

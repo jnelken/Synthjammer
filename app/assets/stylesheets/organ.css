@@ -6,7 +6,7 @@ html, body, ul, li, h1, h3, div {
   font: inherit;
   text-align: center;
   text-decoration: inherit;
-font-family: 'Roboto', sans-serif;
+font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
   background: transparent;
 }
 
@@ -19,14 +19,18 @@ font-family: 'Roboto', sans-serif;
 /*Styles*/
 
 body {
-  background-color: black;
-  color: grey;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(126, 126, 126));
+  color: #666;
+  height: 100vh;
 }
 
 h1 {
+  text-shadow: 1px 1px 0px black;
+  color: #ff91fb;
   margin-top: 80px;
   font-size: 72px;
   font-weight: 900;
+  font-weight: bolder;
 }
 
 div.organ {
@@ -43,13 +47,18 @@ button {
   height: 60px;
   margin: 30px 5px;
   font-size: 40px;
-  color: red;
-  background: grey;
+  color: #000;
+  background: #ddd;
   border-radius: 50px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px black;
 }
 
 .play {
+  color: rgb(0, 208, 52);
   font-size: 36px;
+  padding: 10px;
+  border: none;
 }
 
 .stop {
@@ -57,24 +66,39 @@ button {
 }
 
 .record {
-  font-size: 38px;
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+
+.record:hover {
+  color: rgb(255, 64, 64);
+}
+
+.record:active, .stop:active, .play:active {
+  background: #ccc;
+
 }
 
 
 ul.keyboard {
-  width: 500px;
+  /*width: 486px;*/
+  width: 600px;
   margin: auto;
   list-style: none;
+  /*border: 1px solid black;*/
 }
 
 li.note {
-  background: grey;
+  /*background: #93c47d;*/
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(163, 163, 163));
   float:left;
   width: 50px;
   height: 100px;
   display: block;
   border: 2px solid black;
   font-size: 48px;
+  box-shadow: 1px 5px 5px black;
+  margin: 5px;
 }
 
 li div.root {
@@ -86,10 +110,14 @@ li div.overtone {
 }
 
 li div.pressed:after {
-  /*background: yellow;*/
-  color: red;
-  content: "♪";
+  content: "";
   display: block;
+  height: 100px;
+  background-image: linear-gradient(rgb(255, 255, 255), #ff91fb);
+}
+
+li div.pressed:after ul {
+  background-image: linear-gradient(rgb(255, 255, 255), #ff91fb);
 }
 
 li div.unpressed {
