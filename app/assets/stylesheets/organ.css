@@ -33,6 +33,12 @@ h1 {
   font-weight: bolder;
 }
 
+a {
+  color: #fe60f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 div.organ {
   margin: 10 auto;
   display: block;
