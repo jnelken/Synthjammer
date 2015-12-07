@@ -16,7 +16,7 @@ var Key = React.createClass({
   changeOctave: function () {
     if (this.state.octave !== KeyStore.octaveX()) {
       this.setState({ octave: KeyStore.octaveX() });
-      this.setState({ note: new Note(this.props.noteName * this.props.octave) });
+      this.setState({ note: new Note(this.props.noteName * this.state.octave) });
     }
   },
 
