@@ -2,14 +2,12 @@ html, body, ul, li, h1, h3, div {
   margin: 0;
   padding: 0;
   border: 0;
-
   font: inherit;
   text-align: center;
   text-decoration: inherit;
-font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
   background: transparent;
 }
-
 .group:after {
   content: "";
   display: block;
@@ -23,7 +21,6 @@ body {
   color: #666;
   height: 100vh;
 }
-
 h1 {
   text-shadow: 1px 2px 0px black;
   color: #ff91fb;
@@ -32,22 +29,18 @@ h1 {
   font-weight: 900;
   font-weight: bolder;
 }
-
 a {
   color: #fe60f8;
   text-decoration: none;
   font-weight: bold;
 }
-
 div.organ {
   margin: 10 auto;
   display: block;
 }
-
 div.controls {
   margin: auto;
 }
-
 button {
   width: 60px;
   height: 60px;
@@ -59,44 +52,35 @@ button {
   /*border: 1px solid black;*/
   box-shadow: 0px 5px 1px #000;
   border: none;
-
+  outline: none;
 }
-
 .play {
   font-size: 36px;
   padding: 10px;
   border: none;
 }
-
 .play:hover {
   color: rgb(0, 208, 52);
 }
-
 .stop {
   font-size: 48px;
-    border: none;
+  border: none;
 }
-
 .stop:hover {
   color: white;
 }
-
 .record {
   font-size: 48px;
   padding-bottom: 20px;
-    border: none;
+  border: none;
 }
-
 .record:hover {
   color: rgb(255, 64, 64);
 }
-
 .record:active, .stop:active, .play:active {
   background: #ccc;
   box-shadow: 0px 1px 1px #000;
 }
-
-
 ul.keyboard {
   /*width: 486px;*/
   width: 600px;
@@ -104,11 +88,10 @@ ul.keyboard {
   list-style: none;
   /*border: 1px solid black;*/
 }
-
 li.note {
   /*background: #93c47d;*/
   background-image: linear-gradient(rgb(255, 255, 255), rgb(163, 163, 163));
-  float:left;
+  float: left;
   width: 50px;
   height: 100px;
   display: block;
@@ -117,26 +100,17 @@ li.note {
   box-shadow: 1px 5px 5px black;
   margin: 5px;
 }
-
-li div.root {
-
-}
-
+li div.root {}
 li div.overtone {
   display: none;
 }
-
 li div.pressed:after {
   content: "";
   display: block;
   height: 100px;
   background-image: linear-gradient(rgb(255, 255, 255), #ff91fb);
 }
-
 li div.pressed:after ul {
   background-image: linear-gradient(rgb(255, 255, 255), #ff91fb);
 }
-
-li div.unpressed {
-
-}
+li div.unpressed {}
