@@ -5,7 +5,7 @@ octave modulation.
 
 [Live][heroku]
 
-[heroku]: https://synthjammer.herokuapp.com/
+[heroku]: synthjammer.jacobnelken.com
 
 
 ### How to play
